@@ -7,7 +7,7 @@ RSpec.describe Customer, type: :model do
   it 'invalid names' do
     customer.first_name, customer.last_name = nil, nil
 
-    expect(customer.save).to eq(false)
+    expect(customer.save).to be false
   end
 
   it 'valid names' do
